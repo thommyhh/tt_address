@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "tt_address".
  *
- * Auto generated 17-04-2013 10:35
+ * Auto generated 17-04-2013 10:36
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -14,35 +14,31 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Address list',
 	'description' => 'Displays a list of addresses from an address table on the page.',
 	'category' => 'plugin',
-	'shy' => '0',
+	'shy' => 0,
+	'version' => '2.0.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
 	'module' => '',
 	'state' => 'stable',
-	'uploadfolder' => '0',
+	'uploadfolder' => 0,
 	'createDirs' => '',
 	'modify_tables' => '',
-	'clearCacheOnLoad' => '1',
+	'clearcacheonload' => 1,
 	'lockType' => '',
-	'author' => 'Kasper Skårhøj',
-	'author_email' => 'kasperYYYY@typo3.com',
-	'author_company' => 'Curby Soft Multimedia',
+	'author' => 'Ingo Renner',
+	'author_email' => 'typo3@ingo-renner.com',
+	'author_company' => 'ingo-renner.com',
 	'CGLcompliance' => NULL,
 	'CGLcompliance_note' => NULL,
-	'version' => '1.0.4',
 	'constraints' => 
 	array (
 		'depends' => 
 		array (
-			'typo3' => '',
-			'php' => '',
-			'cms' => '',
 		),
 		'conflicts' => 
 		array (
-			'' => '',
 		),
 		'suggests' => 
 		array (
