@@ -1,16 +1,16 @@
 # TYPO3 Extension "tt_address"
 Displays a list of addresses from an address table on the page.
 
-## Version 2.2.0
+## Version 2.2.1
 
 
 
 
 <table>
-	<tr><td>Version</td><td>2.2.0 stable</td></tr>
-	<tr><td>Release date</td><td>23. December 2007</td></tr>
+	<tr><td>Version</td><td>2.2.1 stable</td></tr>
+	<tr><td>Release date</td><td>24. December 2007</td></tr>
 	<tr><td>Author</td><td>Ingo Renner</td></tr>
-	<tr><td>Comment</td><td>!!! moved old TS into static templates  new fields: gender birthday building room  added stdWrap for singleSelection  support for multiple images  general bug fixes</td></tr>
+	<tr><td>Comment</td><td>2.5.1: added allWrap property for templates 2.2.0: !!! moved old TS into static templates, new fields: gender birthday building room, added stdWrap for singleSelection, added support for multiple images, general bug fixes</td></tr>
 </table>
 
 ## !! Attention !!
