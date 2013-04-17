@@ -1,14 +1,14 @@
 # TYPO3 Extension "tt_address"
 Displays a list of addresses from an address table on the page.
 
-## Version 1.0.3
+## Version 1.0.4
 
 
 
 
 <table>
-	<tr><td>Version</td><td>1.0.3 stable</td></tr>
-	<tr><td>Release date</td><td>25. November 2002</td></tr>
+	<tr><td>Version</td><td>1.0.4 stable</td></tr>
+	<tr><td>Release date</td><td>07. October 2005</td></tr>
 	<tr><td>Author</td><td>Kasper Skrhj</td></tr>
 </table>
 
