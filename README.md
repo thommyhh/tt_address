@@ -1,16 +1,16 @@
 # TYPO3 Extension "tt_address"
 Displays a list of addresses from an address table on the page.
 
-## Version 2.0.0
+## Version 2.0.1
 
 
 
 
 <table>
-	<tr><td>Version</td><td>2.0.0 stable</td></tr>
+	<tr><td>Version</td><td>2.0.1 stable</td></tr>
 	<tr><td>Release date</td><td>26. March 2007</td></tr>
 	<tr><td>Author</td><td>Ingo Renner</td></tr>
-	<tr><td>Comment</td><td>v2.0.0! See manual for update instructions!</td></tr>
+	<tr><td>Comment</td><td>v2.0.0! see manual for update instruction! v2.0.1: doesnt unset the ol combined name field in TCA anymore</td></tr>
 </table>
 
 ## !! Attention !!
