@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "tt_address".
  *
- * Auto generated 17-04-2013 10:36
+ * Auto generated 17-04-2013 10:37
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'description' => 'Displays a list of addresses from an address table on the page.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '2.2.1',
+	'version' => '2.3.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -36,6 +36,8 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' => 
 		array (
+			'cms' => '',
+			'' => '',
 		),
 		'conflicts' => 
 		array (
