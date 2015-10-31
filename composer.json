@@ -3,5 +3,10 @@
 	"description": "Displays a list of addresses from an address table on the page.",
 	"type": "typo3-cms-extension",
 	"homepage": "http://typo3.org/extensions/repository/view/tt_address/",
-	"version": "3.0.0"
+	"version": "3.0.0",
+	"autoload": {
+		"classmap": [
+			"."
+		]
+	}
 }

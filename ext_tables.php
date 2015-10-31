@@ -16,8 +16,8 @@ $TCA['tt_address'] = array (
 		'enablecolumns'     => array (
 			'disabled' => 'hidden'
 		),
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-		'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon.gif',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
+		'iconfile'          => 'EXT:tt_address/ext_icon.gif',
         'searchFields'		=> 'name, first_name, middle_name, last_name, email'
 	),
 	'feInterface' => array (
@@ -42,8 +42,8 @@ $TCA['tt_address_group'] = array(
 			'disabled' => 'hidden',
 			'fe_group' => 'fe_group',
 		),
-		'dynamicConfigFile'        => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-		'iconfile'                 => t3lib_extMgm::extRelPath($_EXTKEY).'icon_tt_address_group.gif',
+		'dynamicConfigFile'        => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
+		'iconfile'                 => 'EXT:tt_address/icon_tt_address_group.gif',
 	),
 	'feInterface' => array(
 		'fe_admin_fieldList' => 'hidden, fe_group, title, parent_group, description',
@@ -70,36 +70,35 @@ $TCA['tt_address']['feInterface']['fe_admin_fieldList'] = $fe_admin_fieldListNew
 	// end splitting name
 
 
-t3lib_extMgm::addPlugin(
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 	array(
 		'LLL:EXT:tt_address/locallang_tca.xml:pi_tt_address',
 		$_EXTKEY.'_pi1'
 	)
 );
-t3lib_extMgm::allowTableOnStandardPages('tt_address');
-t3lib_extMgm::allowTableOnStandardPages('tt_address_group');
-t3lib_extMgm::addToInsertRecords('tt_address');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tt_address');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tt_address_group');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToInsertRecords('tt_address');
 
-t3lib_extMgm::addLLrefForTCAdescr('tt_address','EXT:tt_address/locallang_csh_ttaddress.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tt_address','EXT:tt_address/locallang_csh_ttaddress.xml');
 
 
 // add flexform to pi1
-t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi1'] = 'pi_flexform';
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi1'] = 'layout,select_key,pages,recursive';
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY .'_pi1', 'FILE:EXT:tt_address/pi1/flexform.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($_EXTKEY .'_pi1', 'FILE:EXT:tt_address/pi1/flexform.xml');
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'static/pi1/', 'Addresses');
-t3lib_extMgm::addStaticFile($_EXTKEY, 'static/old/', 'Addresses (!!!old, only use if you need to!!!)');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'static/pi1/', 'Addresses');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'static/old/', 'Addresses (!!!old, only use if you need to!!!)');
 
 if (TYPO3_MODE=='BE') {
-	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_ttaddress_pi1_wizicon'] = t3lib_extMgm::extPath($_EXTKEY).'pi1/class.tx_ttaddress_pi1_wizicon.php';
+	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_ttaddress_pi1_wizicon'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'pi1/class.tx_ttaddress_pi1_wizicon.php';
 
 			// classes for displaying the group tree and manipulating flexforms
-	include_once(t3lib_extMgm::extPath($_EXTKEY).'class.tx_ttaddress_tcefunc_selecttreeview.php');
-	include_once(t3lib_extMgm::extPath($_EXTKEY).'class.tx_ttaddress_treeview.php');
-	include_once(t3lib_extMgm::extPath($_EXTKEY).'class.tx_ttaddress_addfilestosel.php');
-	include_once(t3lib_extMgm::extPath($_EXTKEY).'class.tx_ttaddress_addfieldstosel.php');
+	include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'class.tx_ttaddress_tcefunc_selecttreeview.php');
+	include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'class.tx_ttaddress_treeview.php');
+	include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'class.tx_ttaddress_addfilestosel.php');
+	include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'class.tx_ttaddress_addfieldstosel.php');
 
 }
 

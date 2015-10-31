@@ -24,21 +24,21 @@
 ***************************************************************/
 
 
-require_once(PATH_t3lib.'class.t3lib_treeview.php');
-	
+use TYPO3\CMS\Backend\Tree\View\AbstractTreeView;
+
 /**
  * extends t3lib_treeview to change function wrapTitle().
  * 
  * This function displays a selector with nested groups. The original code is
  * borrowed from the extension "Digital Asset Management" (tx_dam), 
- * author: RenŽ Fritz <r.fritz@colorcube.de>
+ * author: Renï¿½ Fritz <r.fritz@colorcube.de>
  *
- * @author	RenŽ Fritz <r.fritz@colorcube.de>
+ * @author	Renï¿½ Fritz <r.fritz@colorcube.de>
  * @author	Ingo Renner <typo3@ingo-renner.com>
  * @package TYPO3
  * @subpackage tt_address
  */
-class tx_ttaddress_tceFunc_selectTreeView extends t3lib_treeview {
+class tx_ttaddress_tceFunc_selectTreeView extends AbstractTreeView {
 
 	var $TCEforms_itemFormElName = '';
 	var $TCEforms_nonSelectableItemsArray = array();

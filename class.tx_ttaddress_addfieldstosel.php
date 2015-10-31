@@ -21,6 +21,7 @@
 *
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 
 /**
@@ -40,14 +41,12 @@ class tx_ttaddress_addfieldstosel {
     */
 	function main(&$params, &$pObj)	{
 
-		t3lib_div::loadTCA('tt_address');
-
 			// TODO consolidate with list in pi1
 		$coreSortFields = 'gender, first_name, middle_name, last_name, title, company, '
 			.'address, building, room, birthday, zip, city, region, country, email, www, phone, mobile, '
 			.'fax, addressgroup';
 
-		$sortFields = t3lib_div::trimExplode(',', $coreSortFields);
+		$sortFields = GeneralUtility::trimExplode(',', $coreSortFields);
 
 		$selectOptions = array();
 		foreach($sortFields as $field) {
